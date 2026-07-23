@@ -161,7 +161,6 @@ class WayForPay
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
         $response = curl_exec($ch);
-        curl_close($ch);
 
         return json_decode($response, true);
     }
@@ -329,7 +328,6 @@ class WayForPay
         curl_setopt($ch, CURLOPT_POSTFIELDS,$fields);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
         $response = curl_exec($ch);
-        curl_close($ch);
 
         return json_decode($response, true);
     }
